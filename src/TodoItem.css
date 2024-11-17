@@ -1,0 +1,30 @@
+.fa-square-check {
+  color: #808080;
+  font-size: 25px;
+  background: linear-gradient(#fff, #fff);
+  background-repeat: no-repeat;
+  background-size: 60% 80%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.fa-circle-xmark {
+  position: sticky;
+  bottom: 100%;
+  transform: translateY(-50%);
+  font-size: 27px;
+  color: #c83e4d;
+  background: linear-gradient(#fff, #fff);
+  background-repeat: no-repeat;
+  background-size: 50% 80%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.--active {
+  color: var(--success);
+}
+
+.--completed {
+  text-decoration: line-through;
+}

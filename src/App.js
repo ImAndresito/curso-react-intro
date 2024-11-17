@@ -1,37 +1,37 @@
-import "./App.css";
-import { CreateTodoButton } from "./CreateTodoButton";
-import { TodoCounter } from "./TodoCounter";
-import { TodoItem } from "./TodoItem";
-import { TodoList } from "./TodoList";
-import { TodoSearch } from "./TodoSearch";
-import React from "react";
+import React from 'react';
+import { CreateTodoButton } from './CreateTodoButton';
+import { TodoCounter } from './TodoCounter';
+import { TodoItem } from './TodoItem';
+import { TodoList } from './TodoList';
+import { TodoSearch } from './TodoSearch';
+import './App.css';
 
 const defaultTodos = [
   {
-    text: "Tagliare le cipolle",
+    text: 'Tagliare le cipolle',
     completed: true,
   },
   {
-    text: "Fare il Corso introduzione a React.js",
+    text: 'Fare il Corso introduzione a React.js',
     completed: false,
   },
   {
-    text: "Piangere con la piangiano",
+    text: 'Piangere con la piangiano',
     completed: false,
   },
   {
-    text: "LALALALA",
+    text: 'LALALALA',
     completed: false,
   },
 ];
 
 function App() {
   return (
-    <React.Fragment>
+    <div className="App">
       <TodoCounter completed={16} total={20} />
       <TodoSearch />
 
-      <TodoList>
+      <TodoList style={{ flexGrow: 1 }}>
         {defaultTodos.map((todo) => (
           <TodoItem
             key={todo.text}
@@ -42,7 +42,7 @@ function App() {
       </TodoList>
 
       <CreateTodoButton />
-    </React.Fragment>
+    </div>
   );
 }
 

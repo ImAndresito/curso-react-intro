@@ -1,4 +1,6 @@
+import './TodoList.css';
+
 function TodoList({ children }) {
-  return <ul>{children}</ul>;
+  return <ul style={{ padding: 0 }}>{children}</ul>;
 }
 export { TodoList };

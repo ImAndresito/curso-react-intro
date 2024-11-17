@@ -1,0 +1,16 @@
+h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 48px;
+  text-wrap: pretty;
+}
+span {
+  color: var(--accent);
+}
+
+/* LOWEST HEIGHT MOBILE DEVICE */
+@media (height <= 576px) {
+  h1 {
+    padding: 24px;
+  }
+}
