@@ -23,7 +23,7 @@ function CreateTodoButton() {
           border: 'none',
           outline: 'none',
         }}
-        placeholder="Crea nuovo TODO..."
+        placeholder="Crea una nuova attività..."
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
       />

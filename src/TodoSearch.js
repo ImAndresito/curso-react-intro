@@ -18,7 +18,7 @@ function TodoSearch() {
         <i className="fa fa-search"></i>
         <input
           type="search"
-          placeholder="Cerca..."
+          placeholder="Cerca attività..."
           style={{
             border: 'none',
             padding: '5px 0 5px 10px',
