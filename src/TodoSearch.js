@@ -1,11 +1,8 @@
 import './TodoSearch.css';
 import { useState } from 'react';
 
-function TodoSearch() {
+function TodoSearch({ searchValue, setSearchValue }) {
   const [isFocused, setIsFocused] = useState(false);
-  const [searchValue, setSearchValue] = useState('');
-
-  console.log(`Gli utenti cercano le attività che riguardano: ${searchValue}`);
   return (
     <label
       className={[

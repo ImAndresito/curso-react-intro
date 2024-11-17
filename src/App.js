@@ -1,10 +1,10 @@
-import React from 'react';
+import './App.css';
 import { CreateTodoButton } from './CreateTodoButton';
 import { TodoCounter } from './TodoCounter';
 import { TodoItem } from './TodoItem';
 import { TodoList } from './TodoList';
 import { TodoSearch } from './TodoSearch';
-import './App.css';
+import React, { useState } from 'react';
 
 const defaultTodos = [
   {
@@ -42,13 +42,20 @@ const defaultTodos = [
 ];
 
 function App() {
+  const [todos, setTodos] = useState(defaultTodos);
+  const [searchValue, setSearchValue] = useState('');
+
+  const completedTodos = todos.filter(todo => !!todo.completed).length;
+  const totalTodos = todos.length;
+
+  console.log(`Gli utenti cercano le attività che riguardano: ${searchValue}`);
   return (
     <div className="App">
-      <TodoCounter completed={16} total={20} />
-      <TodoSearch />
+      <TodoCounter completed={completedTodos} total={totalTodos} />
+      <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <TodoList style={{ flexGrow: 1 }}>
-        {defaultTodos.map((todo) => (
+        {defaultTodos.map(todo => (
           <TodoItem
             key={todo.text}
             text={todo.text}
