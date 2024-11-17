@@ -7,22 +7,14 @@ function CreateTodoButton() {
 
   return (
     <label
-      style={{
-        display: 'flex',
-        borderRadius: '8px',
-        overflow: 'hidden',
-        marginBottom: '20px',
-      }}
-      className={isFocused ? '--focus-primary' : '--no-focus-primary'}
+      className={[
+        `todo-create-label ${
+          isFocused ? '--focus-primary' : '--no-focus-primary'
+        }`,
+      ]}
     >
       <input
-        style={{
-          width: '100%',
-          paddingLeft: '10px',
-          fontSize: '16px',
-          border: 'none',
-          outline: 'none',
-        }}
+        className="todo-create-input"
         placeholder="Crea una nuova attività..."
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}

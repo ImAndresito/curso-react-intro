@@ -1,3 +1,18 @@
+.todo-create-label {
+  display: flex;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.todo-create-input {
+  width: 100%;
+  padding-left: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+}
+
 .create-todo-btn {
   color: #fff;
   background: var(--primary);
@@ -8,6 +23,7 @@
   display: flex;
   align-items: center;
   transition: background-color 0.3s ease;
+  border-radius: 0 5px 5px 0;
 }
 
 .create-todo-btn:hover {

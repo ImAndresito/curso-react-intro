@@ -5,3 +5,9 @@
   flex-direction: column;
   max-width: 470px;
 }
+
+@media (width <= 576px) {
+  .App {
+    width: 90%;
+  }
+}

@@ -1,10 +1,13 @@
-.todo-search-label {
-  display: flex;
-  justify-content: center;
+.todo-search-button {
+  background-color: #fff;
+  border: none;
   border-radius: 5px;
-  overflow: hidden;
+}
+
+.todo-search-label {
   width: fit-content;
   margin: auto;
+  border-radius: 8px;
 }
 
 .todo-search-input {
@@ -12,5 +15,4 @@
   padding: 5px 0 5px 10px;
   font-size: 16px;
   outline: none;
-  flex-shrink: 0;
 }

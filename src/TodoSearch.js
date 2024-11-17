@@ -11,7 +11,7 @@ function TodoSearch({ searchValue, setSearchValue }) {
         }`,
       ]}
     >
-      <button type="submit" style={{ background: '#fff', border: 'none' }}>
+      <button className="todo-search-button">
         <i className="fa fa-search"></i>
         <input
           className="todo-search-input"
