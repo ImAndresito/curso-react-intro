@@ -1,9 +1,11 @@
-import { useState } from 'react';
 import './TodoSearch.css';
+import { useState } from 'react';
 
 function TodoSearch() {
   const [isFocused, setIsFocused] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
 
+  console.log(`Gli utenti cercano le attività che riguardano: ${searchValue}`);
   return (
     <label
       className={[
@@ -18,13 +20,11 @@ function TodoSearch() {
           className="todo-search-input"
           type="search"
           placeholder="Cerca attività..."
+          value={searchValue}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           onChange={(event) => {
-            console.log('Hai scritto nel TodoSearch');
-            console.log(event);
-            console.log(event.target);
-            console.log(event.target.value);
+            setSearchValue(event.target.value);
           }}
         />
       </button>
