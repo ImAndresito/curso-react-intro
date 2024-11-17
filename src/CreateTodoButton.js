@@ -32,11 +32,14 @@ function CreateTodoButton() {
         style={{
           background: clickColor,
         }}
-        onClick={() => {
+        onClick={(event) => {
+          console.log('Hai cliccato');
+          console.log(event);
+          console.log(event.target);
           setClickColor('var(--success)');
           setTimeout(() => {
             setClickColor('');
-          }, 500);
+          }, 700);
         }}
       >
         +

@@ -21,7 +21,23 @@ const defaultTodos = [
   },
   {
     text: 'LALALALA',
+    completed: true,
+  },
+  {
+    text: 'LELELELE',
     completed: false,
+  },
+  {
+    text: 'LILILILI',
+    completed: false,
+  },
+  {
+    text: 'LOLOLOLO',
+    completed: false,
+  },
+  {
+    text: 'LULULULU',
+    completed: true,
   },
 ];
 
