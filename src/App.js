@@ -45,8 +45,14 @@ function App() {
   const [todos, setTodos] = useState(defaultTodos);
   const [searchValue, setSearchValue] = useState('');
 
-  const completedTodos = todos.filter(todo => !!todo.completed).length;
+  const completedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
+
+  const searchedTodos = todos.filter((todo) => {
+    const todoText = todo.text.toLocaleLowerCase();
+    const searchText = searchValue.toLocaleLowerCase();
+    return todoText.includes(searchText);
+  });
 
   console.log(`Gli utenti cercano le attività che riguardano: ${searchValue}`);
   return (
@@ -55,7 +61,7 @@ function App() {
       <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <TodoList style={{ flexGrow: 1 }}>
-        {defaultTodos.map(todo => (
+        {searchedTodos.map((todo) => (
           <TodoItem
             key={todo.text}
             text={todo.text}
